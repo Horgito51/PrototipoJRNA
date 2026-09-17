@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avon — Catálogo</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Avon</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categorias">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#catalogo">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-frame">
+              <img
+                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80"
+                class="d-block w-100 carousel-image"
+                alt="Colección de joyas"
+              >
+              <div class="carousel-caption-box">
+                <p class="brand-mark">Avon</p>
+                <p class="carousel-text">Joyas y accesorios</p>
+                <p class="carousel-sub">Explora el catálogo de temporada</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-frame">
+              <img
+                src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1600&q=80"
+                class="d-block w-100 carousel-image"
+                alt="Bolsas y textiles"
+              >
+              <div class="carousel-caption-box">
+                <p class="brand-mark">Avon</p>
+                <p class="carousel-text">Bolsas y telas</p>
+                <p class="carousel-sub">Piezas para el día a día</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-frame">
+              <img
+                src="https://images.unsplash.com/photo-1615486363990-dff6c0722a38?auto=format&fit=crop&w=1600&q=80"
+                class="d-block w-100 carousel-image"
+                alt="Peluches y detalles"
+              >
+              <div class="carousel-caption-box">
+                <p class="brand-mark">Avon</p>
+                <p class="carousel-text">Peluches y detalles</p>
+                <p class="carousel-sub">Ideas para regalar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="categorias" class="section-block">
+      <div class="container">
+        <h1 class="section-title">Categorías</h1>
+        <p class="section-lead">Busca un producto o filtra por categoría.</p>
+
+        <form class="catalog-search" id="catalog-search-form" role="search">
+          <label class="visually-hidden" for="catalog-search">Buscar productos</label>
+          <input
+            type="search"
+            id="catalog-search"
+            class="form-control catalog-search-input"
+            placeholder="Buscar en el catálogo..."
+            autocomplete="off"
+          >
+          <button type="submit" class="btn btn-search">Buscar</button>
+        </form>
+
+        <div class="category-filters" id="category-filters" aria-label="Filtros de categoría">
+          <button type="button" class="btn btn-category is-active" data-category="todas">Todas</button>
+          <button type="button" class="btn btn-category" data-category="peluches">Peluches</button>
+          <button type="button" class="btn btn-category" data-category="bolsas">Bolsas</button>
+          <button type="button" class="btn btn-category" data-category="babuchas">Babuchas</button>
+          <button type="button" class="btn btn-category" data-category="telas">Telas</button>
+          <button type="button" class="btn btn-category" data-category="llaveros">Llaveros</button>
+          <button type="button" class="btn btn-category" data-category="dijes">Dijes</button>
+          <button type="button" class="btn btn-category" data-category="cristales">Cristales</button>
+          <button type="button" class="btn btn-category" data-category="perlas">Perlas</button>
+          <button type="button" class="btn btn-category" data-category="pulseras">Pulseras</button>
+          <button type="button" class="btn btn-category" data-category="hilo">Hilo</button>
+          <button type="button" class="btn btn-category" data-category="joyas">Joyas</button>
+        </div>
+
+        <div
+          class="subcategory-filters is-hidden"
+          id="subcategory-filters"
+          aria-label="Subcategorías de joyas"
+        >
+          <p class="subcategory-label">Joyas</p>
+          <button type="button" class="btn btn-subcategory is-active" data-subcategory="todas">Todas las joyas</button>
+          <button type="button" class="btn btn-subcategory" data-subcategory="aretes">Aretes</button>
+          <button type="button" class="btn btn-subcategory" data-subcategory="anillos">Anillos</button>
+          <button type="button" class="btn btn-subcategory" data-subcategory="collares">Collares</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section-block section-block--muted">
+      <div class="container">
+        <h1 class="section-title">Catálogo</h1>
+        <p class="section-lead" id="catalog-status">Mostrando todos los productos.</p>
+        <div class="row g-4" id="product-grid">
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="peluches" data-name="Peluche suave">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1615486363990-dff6c0722a38?auto=format&fit=crop&w=800&q=80"
+                alt="Peluche suave"
+              >
+              <h2 class="product-name">Peluche suave</h2>
+              <p class="product-meta">Categoría · Peluches</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="bolsas" data-name="Bolsa tote">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
+                alt="Bolsa tote"
+              >
+              <h2 class="product-name">Bolsa tote</h2>
+              <p class="product-meta">Categoría · Bolsas</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="babuchas" data-name="Babuchas cómodas">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1648475025388-b6c41b848b7b?auto=format&fit=crop&w=800&q=80"
+                alt="Babuchas cómodas"
+              >
+              <h2 class="product-name">Babuchas cómodas</h2>
+              <p class="product-meta">Categoría · Babuchas</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="telas" data-name="Tela decorativa">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=80"
+                alt="Tela decorativa"
+              >
+              <h2 class="product-name">Tela decorativa</h2>
+              <p class="product-meta">Categoría · Telas</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="llaveros" data-name="Llavero artesanal">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1748273734249-604fc3a72b88?auto=format&fit=crop&w=800&q=80"
+                alt="Llavero artesanal"
+              >
+              <h2 class="product-name">Llavero artesanal</h2>
+              <p class="product-meta">Categoría · Llaveros</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="dijes" data-name="Dije personalizado">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80"
+                alt="Dije personalizado"
+              >
+              <h2 class="product-name">Dije personalizado</h2>
+              <p class="product-meta">Categoría · Dijes</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="cristales" data-name="Cristal decorativo">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1551947391-249dcb8ed976?auto=format&fit=crop&w=800&q=80"
+                alt="Cristal decorativo"
+              >
+              <h2 class="product-name">Cristal decorativo</h2>
+              <p class="product-meta">Categoría · Cristales</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="perlas" data-name="Perlas sueltas">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1583167616102-d8d4b7d02c6c?auto=format&fit=crop&w=800&q=80"
+                alt="Perlas sueltas"
+              >
+              <h2 class="product-name">Perlas sueltas</h2>
+              <p class="product-meta">Categoría · Perlas</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="pulseras" data-name="Pulsera tejida">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80"
+                alt="Pulsera tejida"
+              >
+              <h2 class="product-name">Pulsera tejida</h2>
+              <p class="product-meta">Categoría · Pulseras</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 product-card" data-category="hilo" data-name="Hilo para bordado">
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                alt="Hilo para bordado"
+              >
+              <h2 class="product-name">Hilo para bordado</h2>
+              <p class="product-meta">Categoría · Hilo</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-lg-3 product-card"
+            data-category="joyas"
+            data-subcategory="aretes"
+            data-name="Aretes clásicos"
+          >
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80"
+                alt="Aretes clásicos"
+              >
+              <h2 class="product-name">Aretes clásicos</h2>
+              <p class="product-meta">Joyas · Aretes</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-lg-3 product-card"
+            data-category="joyas"
+            data-subcategory="anillos"
+            data-name="Anillo delicado"
+          >
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
+                alt="Anillo delicado"
+              >
+              <h2 class="product-name">Anillo delicado</h2>
+              <p class="product-meta">Joyas · Anillos</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+          <div
+            class="col-12 col-sm-6 col-lg-3 product-card"
+            data-category="joyas"
+            data-subcategory="collares"
+            data-name="Collar fino"
+          >
+            <article class="product-item">
+              <img
+                class="product-media"
+                src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+                alt="Collar fino"
+              >
+              <h2 class="product-name">Collar fino</h2>
+              <p class="product-meta">Joyas · Collares</p>
+              <p class="product-price">$0.00</p>
+              <button type="button" class="btn btn-catalog">Ver detalle</button>
+            </article>
+          </div>
+        </div>
+        <p class="catalog-empty is-hidden" id="catalog-empty">No se encontraron productos.</p>
+      </div>
+    </section>
+
+    <section id="contacto" class="section-block">
+      <div class="container">
+        <h1 class="section-title">Contacto</h1>
+        <p class="section-lead">Espacio reservado para información de la asesoría.</p>
+        <div class="contact-panel">
+          <p>Correo: ejemplo@avon.com</p>
+          <p>Teléfono: 000 000 0000</p>
+          <p>Horario: Lunes a viernes, 9:00 – 18:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">Avon</p>
+      <p class="footer-copy">Prototipo de catálogo · listo para GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
